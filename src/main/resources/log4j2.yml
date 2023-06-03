@@ -1,0 +1,23 @@
+Configuration:
+  status: INFO
+
+  Appenders:
+    Console:
+      name: CONSOLE
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: "%d{ISO8601} %-5p [%c{3}] [%t] %m%n"
+
+  Loggers:
+    logger:
+      - name: org.springframework
+        level: DEBUG
+      - name: org.springframework.security
+        level: INFO
+      - name: com.shopapotheke
+        level: DEBUG
+
+    Root:
+      level: INFO
+      AppenderRef:
+        ref: CONSOLE

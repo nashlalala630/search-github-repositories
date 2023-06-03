@@ -1,0 +1,14 @@
+
+spring.application.name: shop apotheke
+
+github.endpoint: "https://api.github.com"
+
+server:
+  port: 8080
+
+logging:
+  config: "classpath:log4j2.yml"
+
+
+spring.jackson.serialization:
+  indent-output: true
