@@ -1,4 +1,4 @@
-package com.shopapotheke.challenge.github.core.port.domain;
+package com.shopapotheke.challenge.github.core.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

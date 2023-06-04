@@ -1,7 +1,7 @@
 package com.shopapotheke.challenge.github.proxy.mapper;
 
-import com.shopapotheke.challenge.github.core.port.domain.GitHubRepositories;
-import com.shopapotheke.challenge.github.core.port.domain.GitHubRepository;
+import com.shopapotheke.challenge.github.core.domain.GitHubRepositories;
+import com.shopapotheke.challenge.github.core.domain.GitHubRepository;
 import com.shopapotheke.challenge.github.proxy.dto.GitHubRepositoryProxyResponseDto;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +21,7 @@ public class GitHubRepositoryProxyMapper {
                         .description(dto.getDescription())
                         .language(dto.getLanguage())
                         .starCount(dto.getStartCount())
+                        .htmlUrl(dto.getHtmlUrl())
                         .build()
         ).collect(Collectors.toList()));
     }

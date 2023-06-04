@@ -30,6 +30,6 @@ public class GitHubRepoController {
             @RequestParam(name = "repoNum", required = false) Integer repoNum,
             @RequestParam(name = "dateFrom", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dateFrom,
             @RequestParam(name = "programmingLang", required = false) String programLanguage) {
-        return new ResponseEntity<>(mapper.map(gitHubPort.fetchPopularGitRepositories(repoNum, dateFrom, programLanguage)), HttpStatus.OK);
+        return new ResponseEntity<>(mapper.map(gitHubPort.fetchPopularGitHubRepositories(repoNum, dateFrom, programLanguage)), HttpStatus.OK);
     }
 }

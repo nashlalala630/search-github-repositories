@@ -1,7 +1,7 @@
 package com.shopapotheke.challenge.github.proxy;
 
 import com.shopapotheke.challenge.github.core.port.GitHubPort;
-import com.shopapotheke.challenge.github.core.port.domain.GitHubRepositories;
+import com.shopapotheke.challenge.github.core.domain.GitHubRepositories;
 import com.shopapotheke.challenge.github.proxy.dto.GitHubRepositoryProxyResponseDto;
 import com.shopapotheke.challenge.github.proxy.mapper.GitHubRepositoryProxyMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -24,10 +24,8 @@ public class GitHubProxy implements GitHubPort {
 
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ISO_DATE;
     private static final String GITHUB_URI = "/search/repositories";
-
     private final String gitHubEndpoint;
     private final RestTemplate restTemplate;
-
     private final GitHubRepositoryProxyMapper mapper;
 
     public GitHubProxy(RestTemplate restTemplate, @Value("${github.endpoint}") String githubEndpoint, GitHubRepositoryProxyMapper mapper) {
@@ -37,7 +35,7 @@ public class GitHubProxy implements GitHubPort {
     }
 
     @Override
-    public GitHubRepositories fetchPopularGitRepositories(Integer repoNum, LocalDate dateFrom, String programmingLanguage) {
+    public GitHubRepositories fetchPopularGitHubRepositories(Integer repoNum, LocalDate dateFrom, String programmingLanguage) {
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", "application/vnd.github+json");
         HttpEntity<String> entity = new HttpEntity<>(headers);

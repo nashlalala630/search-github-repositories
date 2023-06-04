@@ -1,4 +1,4 @@
-package com.shopapotheke.challenge.github.core.port.domain;
+package com.shopapotheke.challenge.github.core.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,5 +19,5 @@ public class GitHubRepository {
     private String htmlUrl;
     private String description;
     private String language;
-    private String starCount;
+    private int starCount;
 }

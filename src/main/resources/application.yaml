@@ -1,14 +1,22 @@
 
-spring.application.name: shop apotheke
-
-github.endpoint: "https://api.github.com"
+spring:
+  application.name: shop apotheke
 
 server:
   port: 8080
+  servlet:
+    context-path: /shop-apotheke
 
 logging:
   config: "classpath:log4j2.yml"
 
-
 spring.jackson.serialization:
   indent-output: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+github.endpoint: https://api.github.com

@@ -1,6 +1,5 @@
 package com.shopapotheke.challenge.github.presentation.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,9 +15,9 @@ public class GitHubRepositoryDto {
     private String nodeId;
     private String name;
     private String fullName;
-    private boolean isPrivateRepo;
+    private boolean privateRepo;
     private String htmlUrl;
     private String description;
     private String language;
-    private String startCount;
+    private int startCount;
 }

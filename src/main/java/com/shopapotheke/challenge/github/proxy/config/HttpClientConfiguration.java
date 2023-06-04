@@ -1,4 +1,4 @@
-package com.shopapotheke.challenge.github.config;
+package com.shopapotheke.challenge.github.proxy.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

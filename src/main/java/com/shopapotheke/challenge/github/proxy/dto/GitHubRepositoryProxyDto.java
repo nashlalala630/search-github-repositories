@@ -2,12 +2,14 @@ package com.shopapotheke.challenge.github.proxy.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class GitHubRepositoryProxyDto {
 
     private long id;
@@ -23,5 +25,5 @@ public class GitHubRepositoryProxyDto {
     private String description;
     private String language;
     @JsonProperty("stargazers_count")
-    private String startCount;
+    private int startCount;
 }
